@@ -1,0 +1,285 @@
+/* Variables de color */
+:root {
+  --primary-color: #11c53e;
+  --secondary-color: #0b942d;
+  --text-color: #333;
+  --background-color: #f4f4f9;
+  --white-color: #ffffff;
+  --hover-color: #e0a800;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Header Styling */
+header {
+  background: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  header .logo p {
+    font-size: 1.2rem;
+  }
+}
+
+header nav a {
+  font-size: 1rem;
+  color: var(--white-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  }
+
+  
+/* Banner Styling */
+.banner {
+  position: relative;
+  text-align: left;
+  color: var(--white-color);
+}
+
+.banner img {
+  max-height: 640px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner h2,
+.banner p {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease; /* Transición suave para color */
+}
+
+.banner:hover h2,
+.banner:hover p {
+  color: #ececec; /* Cambio a color blanco al hacer hover */
+}
+
+/* Botón de advertencia grande */
+.btn-warning {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-warning:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Agregar sombra */
+}
+
+
+/* Estilo para el botón normal */
+.btn-success {
+  background-color: var(--secondary-color); /* Color de fondo verde */
+  color: #fff; /* Color de texto blanco */
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 50px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para el hover */
+}
+
+/* Hover sobre el botón */
+.btn-success:hover {
+  background-color: var(--hover-color); /* Color de fondo al hacer hover */
+  transform: scale(1.05); /* Escala ligeramente el botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-color);
+}
+
+.hero-section .btn:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+/* Carruseles */
+#main-carousel {
+  max-height: 640px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #main-carousel {
+    max-height: 500px; /* Ajustar para pantallas más pequeñas */
+  }
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 640px;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h2,
+.carousel-caption p {
+  text-align: center;
+}
+
+.carousel-caption h2 {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+.carousel-caption .btn-lg {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-caption .btn-lg:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .logo p {
+    font-size: 1.2rem;
+  }
+
+  header nav a {
+    font-size: 0.9rem;
+    margin: 0.3rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .logo p {
+    font-size: 1rem;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+  }
+}
+
+/*-- ESTILOS CSS DE MINI BANNERS -->
+.container
+
+.card {
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que las imágenes se ajusten al contenedor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para la tarjeta */
+}
+
+.card-img-top {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  height: 219px; /* Altura específica para los mini banners */
+  object-fit: cover; /* Ajusta la imagen al tamaño del card */
+}
+
+.card-body {
+  background-color: #f8f9fa; /* Fondo claro para el texto */
+  padding: 16px; /* Espaciado interno */
+}
+
+.card-body p {
+  margin: 0; /* Elimina el margen del texto */
+  font-weight: bold; /* Texto más destacado */
+  color: #333;
+}
+
+/* ADAPTACIÓN PARA MOBILE */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: auto; /* Ajusta la altura automáticamente para pantallas pequeñas */
+  }
+}
+
+.card img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card .btn {
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
+@media (max-width: 992px) {
+  .card img {
+    height: auto; /* Ajusta altura en pantallas más pequeñas */
+  }
+}
