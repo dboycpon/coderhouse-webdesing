@@ -235,18 +235,20 @@ footer {
 }
 
 /*-- ESTILOS CSS DE MINI BANNERS -->
-.container
-
-.card {
-  border-radius: 8px; /* Bordes redondeados */
-  overflow: hidden; /* Asegura que las imágenes se ajusten al contenedor */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para la tarjeta */
-}
 
 .card-img-top {
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
-  height: 219px; /* Altura específica para los mini banners */
-  object-fit: cover; /* Ajusta la imagen al tamaño del card */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Evita que los elementos se salgan del contenedor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra con opacidad */
+}
+
+
+.card-img-top {
+  border-radius: 10; /* Reinicia cualquier borde de la imagen */
+   /* Ajusta la imagen sin deformarla */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  height: auto; /* Mantén proporción de aspecto */
+  transition: transform 0.3s ease; /* Para animaciones al pasar el mouse */
 }
 
 .card-body {
@@ -283,3 +285,118 @@ footer {
     height: auto; /* Ajusta altura en pantallas más pequeñas */
   }
 }
+
+.hover-img {
+  transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+}
+
+.hover-img:hover {
+  transform: scale(1.1); /* Efecto hover: aumenta ligeramente la imagen */
+}
+
+
+/* Categorias destacas HOOVER y reempleazo de imagen */
+/* Imagen 1 */
+.img-hover-1 {
+  background-image: url('IMAGENES-/CategoriasDestacadas/Bebifas-1.png');
+  background-size: cover;
+  background-position: center;
+  height: 232px;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.img-hover-1:hover {
+  background-image: url('IMAGENES-/CategoriasDestacadas/Bebifas.png');
+  transform: scale(1.05);
+}
+
+/* Imagen 2 */
+.img-hover-2 {
+  background-image: url('IMAGENES-/CategoriasDestacadas/FrutasyVerduras-1.png');
+  background-size: cover;
+  background-position: center;
+  height: 232px;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.img-hover-2:hover {
+  background-image: url('IMAGENES-/CategoriasDestacadas/FrutasyVerduras.png');
+  transform: scale(1.05);
+}
+
+/* Imagen 3 */
+.img-hover-3 {
+  background-image: url('IMAGENES-/CategoriasDestacadas/LacteosyHuevos-1.png');
+  background-size: cover;
+  background-position: center;
+  height: 232px;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.img-hover-3:hover {
+  background-image: url('IMAGENES-/CategoriasDestacadas/LacteosyHuevos.png');
+  transform: scale(1.05);
+}
+
+/* Imagen 4 */
+.img-hover-4 {
+  background-image: url('IMAGENES-/CategoriasDestacadas/Snacks.png');
+  background-size: cover;
+  background-position: center;
+  height: 232px;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+}
+
+.img-hover-4:hover {
+  background-image: url('IMAGENES-/CategoriasDestacadas/Snacks-1.png');
+  transform: scale(1.05);
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%; /* Se adapta al ancho del contenedor */
+  height: auto; /* Mantiene la proporción original */
+}
+
+@media (min-width: 769px) {
+  .carousel-inner {
+      width: 1440px;      /* Fija el ancho de las imágenes a 1440 px */
+      max-width: 100%;    /* Evita que se exceda del contenedor */
+      margin: 0 auto;     /* Centra la imagen horizontalmente */
+  }
+}
+
+/* Estilo general para los botones de navegación */
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 5; /* Asegura que estén por encima de las imágenes */
+    width: 5%; /* Ajusta el ancho si es necesario */
+}
+
+/* Ajustes para pantallas de escritorio */
+@media (min-width: 769px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%; /* Centra verticalmente */
+        transform: translateY(-50%); /* Ajusta la posición */
+        position: absolute; /* Asegura que se ubiquen dentro del contenedor */
+    }
+
+    .carousel-control-prev {
+        left: 20px; /* Ajusta la distancia del borde izquierdo */
+    }
+
+    .carousel-control-next {
+        right: 20px; /* Ajusta la distancia del borde derecho */
+    }
+}
+
+/* Opcional: Personaliza las flechas (iconos) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    border-radius: 50%; /* Diseño circular */
+    width: 40px; /* Tamaño del icono */
+    height: 40px; /* Tamaño del icono */
+}
+
